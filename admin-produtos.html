@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <link rel="stylesheet" href="produtos-admin.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload</title>
+</head>
+<body>
+
+    <div class="upload-container">
+        <h2>Upload</h2>
+        <form>
+            <div class="input-group">
+        <input type="text" id="nome-produto" placeholder="Nome do Produto">
+            </div>
+            <div class="input-group">
+        <input type="number" id="preco-produto" placeholder="preço">
+            </div>
+            <div class="input-group">
+        <input type="file" id="foto-produto">
+            </div>
+
+            <div class="btn-publicar">
+        <button type="button" onclick="cadastrarProduto()">Publicar</button>
+            </div>
+        </form>
+
+        <div class="admin-footer-links">
+            <a href="login-admin.html">Voltar</a>
+            <a href="admin-upload-video.html">painel de videos</a>
+            
+        </div>
+        
+    </div>
+
+        <script src="produtos.js"></script>
+</body>
+</html>

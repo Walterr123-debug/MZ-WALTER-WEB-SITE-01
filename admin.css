@@ -1,0 +1,118 @@
+/* ==========================================
+   ESTILO ADMIN - INSPIRADO NO LAYOUT SPLIT
+   ========================================== */
+
+/* 1. RESET E CONFIGURAÇÃO BASE */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+/* 2. O CONTENTOR PRINCIPAL (Ocupa o ecrã todo) */
+body {
+    height: 100vh;
+    display: flex; /* Divide o ecrã em duas colunas */
+    background-color: #f4f7f6; /* Um cinza muito claro para o fundo */
+}
+
+/* 3. LADO ESQUERDO: A IMAGEM (50% da largura) */
+.admin-visual {
+    flex: 1; /* Ocupa metade do espaço */
+    background-image: url('imagens/adm.png'); /* Escolhe uma foto bem bonita aqui */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* 4. LADO DIREITO: O FORMULÁRIO (50% da largura) */
+.admin-login-side {
+    flex: 1; /* Ocupa a outra metade */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff; /* Fundo branco puro como na imagem */
+    padding: 40px;
+}
+
+/* 5. LOGOTIPO (O quadrado roxo da imagem) */
+.admin-logo {
+    width: 80px;
+    height: 80px;
+    background-color: #6a41a1; /* Roxo profissional */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    border-radius: 4px;
+}
+
+/* 6. A CAIXA BRANCA DO FORMULÁRIO */
+.login-box {
+    width: 100%;
+    max-width: 350px;
+    padding: 20px;
+}
+
+/* 7. LABELS (Os nomes em cima dos campos) */
+label {
+    display: block;
+    font-size: 0.85rem;
+    color: #888;
+    margin-bottom: 8px;
+}
+
+/* 8. INPUTS DO ADMIN (Estilo Retangular e Limpo) */
+input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd; /* Borda fininha cinza */
+    border-radius: 2px;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+input:focus {
+    border-color: #007bff; /* Azul quando clicas, como na imagem */
+}
+
+/* 9. BOTÃO DE LOGIN (O "Log In" Azul) */
+button {
+    width: auto; /* Na imagem o botão não ocupa tudo */
+    float: right; /* Alinha à direita como na referência */
+    padding: 10px 25px;
+    background-color: #007bff; /* Azul vibrante */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* 10. LINKS DE BAIXO */
+.admin-footer-links {
+    margin-top: 40px;
+    text-align: center;
+    font-size: 0.8rem;
+}
+
+.admin-footer-links a {
+    color: #999;
+    text-decoration: none;
+    display: block;
+    margin-top: 10px;
+}

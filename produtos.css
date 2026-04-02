@@ -1,0 +1,217 @@
+/* 1. CONFIGURAÇÃO GERAL */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .navbar {
+    /* Fixa no topo e ocupa tudo */
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    
+    /* Cores e Espaçamento */
+    background-color: white;
+    padding: 15px 5%; /* Ajusta o respiro lateral */
+    display: flex;
+    justify-content: space-between; /* Logo na esquerda, Menu na direita */
+    align-items: center;
+    box-sizing: border-box;
+    
+    /* Espaço para não grudar nos cards/texto abaixo */
+    margin-bottom: 50px; 
+    
+    /* Sombra leve para destacar do fundo */
+    border-bottom: 1px solid #f0f0f0;
+  }
+  
+  /* Estilo da Logo (Quadrado Roxo) */
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: sans-serif;
+    font-weight: bold;
+  }
+
+  .logo a{
+    text-decoration: none;
+}
+  
+  .logo-box {
+    background-color: #634193; /* Roxo da imagem */
+    color: white;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+  }
+  
+  /* Estilo do Menu */
+  .menu {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+  }
+  
+  .menu a {
+    text-decoration: none;
+    color: #666; /* Cinza dos links */
+    font-family: sans-serif;
+    font-size: 14px;
+  }
+  
+  /* Cor do link selecionado (Sobre nos) */
+  .menu a.active {
+    color: #634193;
+    font-weight: bold;
+  }
+
+
+/* 2. CONTAINER DA VITRINE */
+.vitrine-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 30px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* 3. O CARD (INSPIRADO NA IMAGEM) */
+.produto-card {
+    background: #ffffff;
+    border-radius: 20px; /* Bordas bem arredondadas como na foto */
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column; /* Imagem em cima, texto embaixo */
+    transition: transform 0.3s ease;
+}
+
+.produto-card:hover {
+    transform: translateY(-10px);
+}
+
+/* 4. ÁREA DA IMAGEM (O TOPO COLORIDO) */
+.produto-imagem-box {
+    background: linear-gradient(135deg, #a5b4fc, #6366f1); /* Degradê roxo/azul igual à foto */
+    height: 220px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding: 20px;
+}
+
+.produto-imagem-box img {
+    width: 78%;
+    height: auto;
+    filter: drop-shadow(0 10px 15px rgba(0,0,0,0.2)); /* Sombra na própria foto */
+    transform: rotate(0deg); /* Leve inclinação para dar estilo */
+}
+
+/* Ícone de Coração (Opcional) */
+.produto-imagem-box::after {
+    content: '❤';
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: rgba(255,255,255,0.3);
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 14px;
+}
+
+/* 5. ÁREA DE INFORMAÇÕES (PARTE BRANCA) */
+.produto-info {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.produto-info h3 {
+    font-size: 1.2rem;
+    color: #1e293b;
+    font-weight: 600;
+}
+
+/* Tags de tamanho/cor (Como o EU38 na foto) */
+.produto-info .tags {
+    display: flex;
+    gap: 5px;
+}
+
+.produto-info .tags span {
+    font-size: 10px;
+    border: 1px solid #e2e8f0;
+    padding: 2px 8px;
+    border-radius: 4px;
+    text-transform: uppercase;
+    color: #64748b;
+}
+
+.produto-info p {
+    font-size: 0.85rem;
+    color: #64748b;
+    line-height: 1.5;
+    margin: 5px 0;
+}
+
+/* 6. RODAPÉ DO CARD (PREÇO E BOTÃO) */
+.card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.preco-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.preco-container span {
+    font-size: 10px;
+    text-transform: uppercase;
+    color: #94a3b8;
+    font-weight: bold;
+}
+
+.produto-info .preco {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #1e293b;
+}
+
+/* 7. BOTÃO ESTILIZADO */
+.btn-carrinho, .btn-comprar {
+    background-color: #4f46e5; /* Roxo escuro da imagem */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 12px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.btn-carrinho:hover {
+    background-color: #4338ca;
+}

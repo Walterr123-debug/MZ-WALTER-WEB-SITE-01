@@ -1,0 +1,78 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', 'Segoe UI', sans-serif; /* Usando Poppins para modernidade */
+}
+
+body {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .navbar {
+    /* Fixa no topo e ocupa tudo */
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    
+    /* Cores e Espaçamento */
+    background-color: white;
+    padding: 15px 5%; /* Ajusta o respiro lateral */
+    display: flex;
+    justify-content: space-between; /* Logo na esquerda, Menu na direita */
+    align-items: center;
+    box-sizing: border-box;
+    
+    /* Espaço para não grudar nos cards/texto abaixo */
+    margin-bottom: 50px; 
+    
+    /* Sombra leve para destacar do fundo */
+    border-bottom: 1px solid #f0f0f0;
+  }
+  
+  /* Estilo da Logo (Quadrado Roxo) */
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: sans-serif;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .logo a{
+    text-decoration: none;
+  }
+  .logo-box {
+    background-color: #634193; /* Roxo da imagem */
+    color: white;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  /* Estilo do Menu */
+  .menu {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+  }
+  
+  .menu a {
+    text-decoration: none;
+    color: #666; /* Cinza dos links */
+    font-family: sans-serif;
+    font-size: 14px;
+  }
+  
+  /* Cor do link selecionado (Sobre nos) */
+  .menu a.active {
+    color: #634193;
+    font-weight: bold;
+  }
